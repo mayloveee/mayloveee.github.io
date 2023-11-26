@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Page 3</title>
+<!-- we can add meta-data to the head of our document 
+this tells our web browser what our web page is about. 
+so we place them within the head, not the body
+they are self-closing, we do not need closing tags-->
+
+<!-- add a description to the web browser -->
+<meta name="description" content="HTML lab 2">
+
+<meta name="keywords" content = "colors, metadata, beginners">
+
+<meta name = "author" content = "John Snow">
+<!-- if you were to view this web page on a mobile device, 
+    this web page will scale proportionaly with that device -->
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+
+<!-- char set meta tag, we can tell browser what kind of character encoding that we are using,
+   so authors are encouraged to use UTF-8 for unicode. you can also use basic ASCII (discouraged)-->
+<meta charset="UTF-8">
+
+<!-- web browser to refresh rate automatically 
+how many seconds you want to wait to have
+your browser refreshed -->
+<!-- <meta http-equiv="refresh" content = "30"> -->
+
+</head>
+
+
+<body>
+
+    <!-- besides action attribute, there is also a method attribute
+    and two common values of the method attributes are post and get.
+    get: is usually considered to be insecure. it's going to append 
+    your data to the URL of your webpage. show in browser, it going to show everything in the URL.
+    if you need to store secure information, like a password, do not use GET.
+    it's useful for search box.  post is better for secure information (but we do not have a server set up now). 
+
+    -->
+    <form action="action_page.php" method = "get">
+        <!-- to separate these two input areas, let's use two div sections. 
+        you can also add a line break <br> -->
+        <div>
+            <!-- it's considered to be a good practice to fill out a for 
+            attribute within the label and set it a name, fname.-->
+            <label for = "fname">First Name: </label>
+            <!-- within the associated element, let's set the ID also equal to fname-->
+            <input type = "text" id="fname" name = "fname" placeholder = "input your first name..." required>
+            <!--ID attribute: this does a few things (1) if we click on the label, 
+                it select the input area. (2) it is also helpful for people
+                using screen readers,so they can easily navigate your form.-->
+            <!-- name attribute: there is also a name attribute, when we submit this 
+            data, we need to give a name to that data; think this as a variable.
+            let's also name it fname.-->
+            <!-- placeholder attribute: to display default text. and set it equal to some texts.-->
+        </div>
+       
+        <div>
+            <label for = "lname">Last Name: </label>
+            <input type = "text" id="lname" name = "lname" placeholder = "input your last name...">
+        </div>
+
+        <div>
+            <label for = "psw">Password: </label>
+            <!-- set the input type to be password -->
+            <input type = "password" id="psw" name = "psw" placeholder = "your password..." maxlength="12" required>
+        </div>
+
+        <div>
+            <label for = "email">Email:</label>
+            <!-- we need an @ character in the email -->
+            <input type = "email" id = "email" name ="email" placeholder = "your email...">
+        </div>
+
+        <div>
+            <label for = "phone">Phone No.:</label>
+            <input type = "tel" id = "phone" name ="phone" placeholder = "your phone...">
+        </div>
+
+        <div>
+            <label for = "bdate">Birthday:</label>
+            <input type = "date" id = "bdate" name ="bdate">
+        </div>
+
+        <div>
+            <!-- if you want people to put in the amount of goods they are buying -->
+            <label for = "quantity">Quantity:</label>
+            <input type = "number" id = "quantity" name ="quantity" min ="0" max = "99" value = "1">
+            <!-- we should add some limitations for the numbers. default value could be 1-->
+        </div>
+        <!-- radio button: Ms/Mr/Dr -->
+        <div>
+            <lable for="title">Title: </lable>
+
+            <!-- to put them in the same group, we have to give them same names.
+            we can also select ONLY one (radio button)-->
+            <label for = "Mr.">Mr.</label>
+            <input type = "radio" ID = "Mr." name = "title" value = "Mr." >
+
+            <label for = "Mrs.">Mrs.</label>
+            <input type = "radio" ID = "Mrs." name = "title" value = "Mrs." >
+
+            <label for ="Dr.">Dr.</label>
+            <input type = "radio" id = "Dr." name = "title" value = "Dr." >
+        </div>
+
+        <!-- drop down menu, use select element -->
+        <div>
+            <label for = "pymt">Payment:</label>
+            <select id = "pymt" name = "pymt">
+                <!-- list individual element within the selection element -->
+                <option value = "visa">visa</option>
+                <option value = "mastercard">mastercard</option>
+                <option value = "giftcard">giftcard</option>
+            </select>
+
+        </div>
+            <lable for = "subscribe">Subscribe: </lable>
+            <input type ="checkbox" id = "subscribe" name = "subscribe">
+        <div>
+
+        </div>
+
+        <!-- allow users to reset tshe form -->
+        <div>
+            <input type = "reset">
+        </div>
+        <!-- finally, there is usuall a submit button at the end of the form -->
+        <div>
+            <input type = "submit">
+            <!-- currently, our data does not have any place to go to.
+            so if we click on the submit button, the data won't go anywhere.
+            However, if we want to send this data into a page, we have to list
+            that page within the action attribute of our form's opening tag/element.
+            Here, we will need the help of a dynamic programming language, 
+            such as PHP for example. which we will not be talking about today.-->
+        </div>
+    </form>
+
+    <!-- <body style = "background-color: black;"> -->
+    <!-- add/change colors -->
+        <h1 style = "color:red"> Hello world!</h1>
+        <h1 style = "color:rgb(0, 174, 255)"> Hello world!</h1>
+        <h1 style = "color:#32a852"> Hello world!</h1>
+        <!-- you can open a color picker in google and use hexadecimal number # start with hashtag-->
+        <p style = "background: gray; color: white">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Animi laudantium sed deleniti at illo eius earum veritatis iure 
+            porro totam saepe sapiente, magni officiis eum aut provident qui enim sint.
+        </p>
+    <br>
+
+    <!-- span = adds markup to text or portion of a document
+    anything surround with a pair of span tags, we can apply markup or some effect to it. 
+    we can add attributes to the content within the span tags-->
+
+    <h1>Hello!</h1>
+
+    <p>
+        <span style = "color:red">Lorem ipsum dolor sit amet consectetur adipisicing elit. </span><br>
+        Iste, nemo sequi odio corporis asperiores laudantium et molestiae 
+        aperiam quasi illum fuga adipisci delectus assumenda voluptatibus porro autem quam quidem sint.
+    </p>
+
+    <!-- div = defines a division of a document, similar to span 
+    except it divdes a division of the document -->
+
+    <p style = "background: grey; color: red">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Iste, nemo sequi odio corporis asperiores laudantium et molestiae 
+        aperiam quasi illum fuga adipisci delectus assumenda voluptatibus porro autem quam quidem sint.
+    </p>
+
+
+    <div style = "background: grey">
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Iste, nemo sequi odio corporis asperiores laudantium et molestiae 
+            aperiam quasi illum fuga adipisci delectus assumenda voluptatibus porro autem quam quidem sint.
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Iste, nemo sequi odio corporis asperiores laudantium et molestiae 
+            aperiam quasi illum fuga adipisci delectus assumenda voluptatibus porro autem quam quidem sint.
+        </p>
+
+    </div>
+
+
+
+    <button disabled>Click Me (Disabled)</button>
+    <br>
+    <a href="https://www.google.com">
+        <!-- css set style, use semicolon-->
+        <button style = "background-color: darkslategrey; color: white;border-radius: 5px;" width="50" height = "100">Click Me</button> 
+        <!-- when we click on some button, then we can have this button execute some function
+        this is where javascript comes in. -->
+    </a>
+    <br>
+    <button onclick="doSomething()">Button with JavaScript Function.</button>
+
+    <!-- let's try a very simple and small javascript element within HTML just for now,
+    later you have to move it out in a separate file. 
+    We can change the onclick() to a javascript file.-->
+    <p id = "test">Hello World!</p>
+    <script>
+        function doSomething(){
+            document.getElementById("test").innerHTML = "GoodBye!";
+        }
+    </script>
+
+    <br>
+
+
+
+    <!-- iframe = embed conent from another source into an HTML document
+    ex. used for advertisement, used in many hacking techniques 
+    self closing tag-->
+
+    <!-- <iframe src="https://www.google.com"> -->
+    <!-- you will find that Google refuse to connect. 
+    cuz many website disabled the use of iFrames
+    since we are embedding another web page within our
+    webpage, a common hacking technique is that you can 
+    have this embedded webpage take up the entire frame of
+    your HTML document. Your website could pose another website,
+    which could be dangerous. For instance, if you embed bank of America website 
+    and somebody visit your website, then type in their banking info
+    like their login credentials, and you could capture that (bing works)-->
+    <br>
+    <iframe src="https://www.bing.com" height="500" width="1000"></iframe>
+    <br>
+    <iframe style="border: 0;" src="ad.html" height="500" width="1000"></iframe>
+    <!-- embedded html has a border. so remove it -->
+    <br>
+
+
+
+
+
+</body>
+</html>

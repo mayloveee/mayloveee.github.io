@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<!-- quick generate the default doc type, do !+ TAB key -->
+<!-- start with this, to let the browser know this is an html5 document 
+    type cmd + K + C in mac, ctrl + K + C in windows-->
+
+<!-- next, we will create a series of html tags, tags are keywrods with angle brackets 
+that your web browser decide how to format and format and display content, 
+usually will come into pairs. so we will need opening and closing tags -->
+
+<html>
+<!-- /*two elements, head and body inside html*/ -->
+
+<head>
+<!-- represent information about the web page -->
+    <title>My first website. </title>
+
+</head>
+
+<body>
+    <!--what you will display to the users-->
+    <h1>This is my 1st line of content.</h1>
+    <h2>This is my 2nd line of content.</h2>
+    <h3>This is my 3rd line of content.</h3>
+    <h4>This is my 4th line of content.</h4>
+    <h> This is my body of content.</h>
+
+    <!-- elements: elements embody the opening tag, any content within
+    and the closing tag. Tags make up a portion of elements -->
+    
+    
+    <p>This is a new paragraph.</p>
+    <br>  <!-- <br> to add a line break, no closing tag -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veritatis aspernatur doloremque, quis perspiciatis esse voluptatem animi temporibus delectus qui iusto, ipsa dolor! Vero totam doloremque consectetur explicabo quidem ea!</p>
+    <!-- If you need some sample texts, type in lorem and then tab -->
+    <!-- p tag has some space around it, before/after the paragrah -->
+    <hr>
+    <!-- horizontal rule, add a rule/line, to divide the webpage content section by section, no closing tag -->
+    
+    <a href = "https://www.google.com" target = _blank title = "this takes you to Google">
+        Google
+    </a>
+    <!-- turn text into hyper links, an h-ref attribute that you can choose
+    to set to be your url, target attribute, if you want to open in new tab, _blank 
+    if set to be _self, then will open in the same window.
+    title is a pop-up info when you hover your mouse cursor over the link. 
+    -->
+    <br>
+    <hr>
+    <a href = "page2.html" target = _blank title = "this takes you to page 2">
+       Go to my page 2.
+    </a>
+    <br>
+    <!-- this will be helpful if you have a navigation bar. -->
+    <a href = "page3.html" target = _blank title = "this takes you to page 3">
+        Go to my page 3.
+     </a>
+     <br>
+     <a href = "page4.html" target = _blank title = "this takes you to page 4">
+         Go to my page 4.
+      </a>
+
+    <br>
+    <hr>
+    <a href = "mailto: xt43@duke.edu" target = _blank> Email Xin. </a>
+    <!-- you can also use h-ref to send emails. text, images, urls, emails, new pages -->
+
+    <br>
+    <!-- img is a self-closing tag, and there are many things/attributes you need to change 
+    source: src, identify the file path (if you have many images, put them all into one folder pls) -->
+    <img src = "dku-logo.png">
+    <br>
+
+    <img src = "/images/dku.jpeg" height = "100" alt = "this is an image of duke kunshan university." 
+    title = "dku is awesome">
+    <!-- height and width will be resized proportionaly once you change one, 
+    but you can do them individually too-->
+    <!-- we will also add the alt attributes, for blind users who cannot see, 
+    the alt text will allow them to read out the texts info by the screen reader 
+    you can also add a title too which will show in the pop up window-->
+    <br>
+
+    <a href = "https://www.dukekunshan.edu.cn/">    
+        <img src = "dku-logo.png">
+    
+    </a>
+    <!-- we can also turn the image into a hyperlink by adding opening and closing a tags and h-ref link -->
+
+
+
+
+    <br>
+    <audio controls autoplay muted loop src = "music1.mp3"> </audio>
+    <!-- controls is a boolean attributes true/false (adding the text is true)
+    you can add either: autoplay muted loop (and more) -->
+    <br>
+
+    <audio controls loop > 
+        <source src="music1.mp3">
+        <source src="music1.wav"> 
+        <!-- for back up purposes, just in case one does not work 
+        if the browser does not support the prior two audio files
+        you can always display a msg:-->
+        This browser does not support HTML5 audio.
+    </audio>
+
+    <br>
+    <!-- video file types: MP4, WebM, Ogg -->
+    <video controls autoplay muted loop src = "mirror_chi23.mp4" width = "300">   
+    <!-- change controls into autoplay -->
+    <!-- alternatively, we can do closing tag and add a source tag -->
+    <video controls autoplay>
+        <source src = "mirror_chi23.mp4">
+        <source src = "mirror_chi23.WebM">
+        This browser does not support HTML5 video.
+    </video>
+
+</body>
+
+</html>
+
+
